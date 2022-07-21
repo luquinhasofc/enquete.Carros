@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <form method="post" action="">
+    
+    <p>Qual tipo de carro você gosta ?</p>
+    
+    <input id="radio_cor_Alto" type="radio" name="enquete_carros" value="Alto">
+    <label for="radio_cor_alto">Alto</label>
+    <input id="radio_cor_Baixo" type="radio" name="enquete_carros" value="Baixo">
+    <label for="radio_cor_Baixo">Baixo</label>
+    <input id="radio_cor_Rapido" type="radio" name="enquete_carros" value="Rapido">
+    <label for="radio_cor_Rapido">Rapido</label>
+    
+    <br><button type="submit">Mandar</button>
+  
+  </form>
+</body>
+</html>
+
+<?php
+  if (isset($_POST['emquete_carros'])){
+      setcookie('enquete_carros', $_POST['enquete_carros']);
+    }
+
+  if (isset($_COOKIE['enquete_carros'])){
+    echo "Você ja votou. Não pode votar novamente.";
+  }else{
+    include 'enquente.html';
+  }
+?> 
