@@ -24,15 +24,3 @@
   </form>
 </body>
 </html>
-
-<?php
-  if (isset($_POST['emquete_carros'])){
-      setcookie('enquete_carros', $_POST['enquete_carros']);
-    }
-
-  if (isset($_COOKIE['enquete_carros'])){
-    echo "Você ja votou. Não pode votar novamente.";
-  }else{
-    include 'enquente.html';
-  }
-?> 
